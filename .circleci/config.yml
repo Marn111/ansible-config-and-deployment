@@ -3,8 +3,7 @@
 version: 2.1
 
 # orbs: 
-#   python3: circleci/python:3.7-alpine3.11
-
+#   python3: circleci/python@3.7
 jobs:
   configure_infrastructure:
     docker:
@@ -12,8 +11,8 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-              # You can get this ID in the section where you registered the SSH Key
-              fingerprints: ["55:a8:e8:6a:0d:d1:ee:57:e9:0b:8a:c6:95:db:a0:09"] 
+          fingerprints:
+            - "b6:c0:27:6d:7d:d9:81:53:cf:bc:d3:b7:da:f4:fe:11"
       - run:
           name: Install Ansible
           command: |
